@@ -30,7 +30,8 @@ Fourload
 
 https://fourload.vercel.app/
 
-Until that URL exists, the app can be built from the project folder with `npm install`, `npm test`, and `npm run dev` or `npm run build` (static files go to `out/`).
+
+Source code: https://github.com/Joe-Simo/fourload
 
 ### Project cover
 
