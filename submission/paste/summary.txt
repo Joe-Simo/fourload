@@ -1,0 +1,17 @@
+Fourload is a browser app that plans Snapmaker U1 print jobs around its four toolheads. Drop a 3MF, open a JSON plan, load a sample, or add parts by hand. Fourload assigns colours to T0 through T3, previews each job on the official 270 mm x 270 mm bed, and checks materials, temperatures, speed, acceleration and flow against official Snapmaker lists and maxima.
+
+How it connects to the U1. The U1 loads four toolheads. Many downloaded or home-built plates use more than four colours, and the usual advice is to merge the closest ones. Sometimes you do not want to merge them. Fourload splits that plate into the fewest separate U1 jobs where each job still fits four slots and the official build volume. It does not claim the printer swaps spools mid-print, and it does not auto-merge colours. U1 Palette Fit already covers merging, and Fourload does not try to replace it.
+
+Try it with no printer:
+1. Load "Sample: six colours, two jobs". Job 1 holds the board and three pawns (four colours), Job 2 holds the white and black tokens.
+2. Load "Sample: four colours, one job" for a plate that stays in one loadout.
+3. Load "Sample: limits and material checks" to see a 300 mm panel and a five-colour part blocked, plus material and maxima warnings.
+4. Export the markdown loadout card.
+
+How it is built. TypeScript and Next.js, static export, MIT licensed, 28 tests. Parts are split into the fewest groups whose colour union is at most four (exact search with a first-fit bound), then packed onto the 270 mm bed. Every U1 number comes from official pages read 12 November 2026: https://www.snapmaker.com/snapmaker-u1/specs and the official U1 FAQ topic. Fourload does not invent print time or filament mass.
+
+Limits. This has not been validated on a physical U1. I do not own one and I am not asking for hardware. The FAQ says you do not need a U1 to submit, and the app is a finished, tryable demo. U1 owners are welcome to test their own 3MF files, and I will fix what they find.
+
+Built with AI coding assistance. The job-split and packing logic is original and covered by tests. Independent project, not affiliated with Snapmaker. Screenshots and details are in the first reply.
+
+Source code and live demo link: https://github.com/Joe-Simo/fourload

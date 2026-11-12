@@ -6,7 +6,7 @@ Fourload is a browser app for colour layout and print-job planning on the Snapma
 
 This is a planning aid, not a slicer. It has not been validated on a physical Snapmaker U1. It is an independent project and is not affiliated with Snapmaker.
 
-Live demo: see the current deploy URL in `submission/FORUM-POST.md` after the first deploy.
+Live demo: https://fourload.vercel.app/ (try `?sample=six&job=1`, `?sample=six&job=2`, `?sample=four`, `?sample=limits`).
 
 ## What it does
 
